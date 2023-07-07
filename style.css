@@ -80,3 +80,72 @@ body {
     height: 2px;
     background-color: #EAEAEA;
 }
+
+.sign-in-modal {
+    color: #0D0C22;
+    font-family: Poppins;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.9px;
+}
+
+.welcome-modal {
+    color: #96979D;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.5px;
+}
+
+.form-modal{
+    margin-top: 50px;
+    width: auto;
+    height: 48px;
+    flex-shrink: 0;
+}
+
+.forgot-password-modal{
+    text-align: right;
+    margin-top: 30px;
+    color: #1A79E3;
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.375px;
+}
+
+.button-sign-in-modal{
+    width: auto;
+    height: 45px;
+    border-radius: 7px;
+    background: #1A79E3;
+}
+
+.custom-button-sign-in-modal{
+    margin-top: 40px;
+    width: 375px;
+    height: 35px;
+    border-radius: 7px;
+    background-color: #0079FF;
+    color: #fff;
+    border: none;
+}
+
+.dont-have-account-modal{
+    text-align: center;
+    margin-top: 12px;
+    color: #999AA4;
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.375px;
+}
+
