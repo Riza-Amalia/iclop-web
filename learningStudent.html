@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <style>
+        /* Additional styles */
+        .sidebar {
+          background-color: #FFFFFF;
+          width: 245px;
+        }
+    
+        .content {
+          min-height: 400px;
+          background-color: #FFFFFF;
+          padding: 20px;
+        }
+    
+        .footer {
+          background-color: #FAFAFA;
+          padding: 10px;
+          text-align: center;
+        }
+      </style>
+    <title>iCLOP</title>
+  </head>
+  <body>
+     <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #FEFEFE;">
+        <div class="container-fluid">
+          <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+          <img src="./images/logo.png" alt="logo" width="104" height="65">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="mx-auto">
+              <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Dashboard Student</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Learning</a>
+                </li>
+               
+              </ul>
+            </div>
+            <p style="margin-top: 10px; margin-right: 10px;">Halo, Riza</p>
+            <img src="./images/profile.png" alt="profile" style="height: 50px; margin-right: 10px;">
+            <i class="fas fa-chevron-down" style="color: #0079FF;"></i>
+            <!-- <button class="btn btn-primary custom-button-sign-up" onclick="window.location.href='register.html'">Sign Up</button> -->
+          </div>
+        </div>
+    </nav>
+
+<!-- Page Content -->
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <nav class="col-md-2 d-none d-md-block sidebar">
+        <div class="sidebar-sticky">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+                <div class="row align-items-start">
+                    <div class="col">
+                      <p style="font-weight: 600; font-size: 14px; color: #34364A; margin-left: 15px;">APLAS WEBAPPS</p>
+                    </div>
+                    <div class="col">
+                        <!-- GAMBAR APLAS -->
+                        <img src="./images/learning-logo.png" alt="learning-logo" style="height: 100px;">
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <div class="row align-items-start">
+                    <div class="col-1">
+                      <i class="fas fa-book" style="margin-top: 12px; margin-left: 15px;"></i>
+                    </div>
+                    <div class="col">
+                        <a class="nav-link active" href="#" onclick="showContent('start-learning')" style="color: #34364A;">Start Learning</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <div class="row align-items-start">
+                    <div class="col-1">
+                      <i class="fas fa-check-circle" style="margin-top: 12px; margin-left: 15px;"></i>
+                    </div>
+                    <div class="col">
+                        <a class="nav-link" href="#" onclick="showContent('validation')" style="color: #34364A;">Validation Result</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <div class="row align-items-start">
+                    <div class="col-1">
+                      <i class="fas fa-trophy" style="margin-top: 12px; margin-left: 15px;"></i>
+                    </div>
+                    <div class="col">
+                        <a class="nav-link" href="#" onclick="showContent('rank')" style="color: #34364A;">Top 20 Rank</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <div class="row align-items-start">
+                    <div class="col-1">
+                      <i class="fas fa-cog" style="margin-top: 12px; margin-left: 15px;"></i>
+                    </div>
+                    <div class="col">
+                        <a class="nav-link" href="#" onclick="showContent('settings')" style="color: #34364A;">Settings</a>
+                    </div>
+                </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Content -->
+      <main class="col-md-10">
+        <div id="start-learning" class="content">
+          <p style="font-size: 24px; font-weight: 500; color: #34364A;">Start Leraning</p>
+          <div>
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" id="learning-tab" data-bs-toggle="tab" href="#learning">Learning Topic</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="finished-tab" data-bs-toggle="tab" href="#finished">Topic Finished</a>
+              </li>
+            </ul>
+            <div class="tab-content mt-3">
+              <div class="tab-pane fade show active" id="learning-tab">
+
+                <div class="row">
+                    <div class="col">
+                      <div class="p-3">A1:Java - Basic UI Java Edition - for Android Studio 3.x</div>
+                    </div>
+                    <div class="col" style="text-align: right;">
+                      <button class="btn" style="color: #636363; background-color: #EDEDED;">Detail Materi</button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                      <div class="p-3">A1:Java - Basic UI Java Edition - for Android Studio 4.x</div>
+                    </div>
+                    <div class="col" style="text-align: right;">
+                      <button class="btn" style="color: #636363; background-color: #EDEDED;">Detail Materi</button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                      <div class="p-3">A1:Kotlin - Basic UI Kotlin Edition</div>
+                    </div>
+                    <div class="col" style="text-align: right;">
+                      <button class="btn" style="color: #636363; background-color: #EDEDED;">Detail Materi</button>
+                    </div>
+                </div>
+            
+            </div>
+              <div class="tab-pane fade" id="finished-tab">
+                <h3>Topic Finished</h3>
+                <p>This is the content for the Topic Finished.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="validation" class="content" style="display: none;">
+          <h1>Validation Result</h1>
+          <p>This is the products content.</p>
+        </div>
+        
+        <div id="rank" class="content" style="display: none;">
+          <h1>Top 20 Rank</h1>
+          <p>This is the orders content.</p>
+        </div>
+        
+        <div id="settings" class="content" style="display: none;">
+          <h1>Settings</h1>
+          <p>This is the customers content.</p>
+        </div>
+      </main>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2023 iCLOP. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Function to show the selected content based on sidebar link click
+    function showContent(contentId) {
+      // Hide all content divs
+      var contentDivs = document.getElementsByClassName('content');
+      for (var i = 0; i < contentDivs.length; i++) {
+        contentDivs[i].style.display = 'none';
+      }
+
+      // Show the selected content div
+      var selectedContent = document.getElementById(contentId);
+      if (selectedContent) {
+        selectedContent.style.display = 'block';
+      }
+    }
+  </script>
+
+</body>
+<script src="script.js"></script>
+</html>
+

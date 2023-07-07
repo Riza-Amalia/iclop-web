@@ -1,0 +1,77 @@
+.custom-button-sign-in {
+    width: 100px;
+    height: 35px;
+    border-radius: 20px;
+    background-color: #FEFEFE;
+    color: #000;
+    border: none;
+    margin-right: 10px;
+}
+
+.custom-button-sign-in:hover {
+    background-color: #FEFEFE;
+    /* Mengubah warna latar belakang saat hover */
+    color: #0079FF;
+}
+
+.custom-button-sign-up {
+    width: 100px;
+    height: 35px;
+    border-radius: 20px;
+    background-color: #0079FF;
+    color: #fff;
+    border: none;
+}
+
+body {
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+    border-bottom: 2px solid #0079FF;
+    margin-right: 10px;
+}
+
+.navbar.navbar-expand-lg {
+    margin-left: 20px;
+    /* Memberikan margin bawah sebesar 20px pada navbar */
+    margin-right: 20px;
+}
+
+.btn.btn-outline-secondary {
+    width: 100px;
+    height: 35px;
+    border-radius: 20px;
+    background-color: #0079FF;
+    color: #fff;
+    border: none;
+}
+
+.welcome-to-iclop {
+    font-size: 22px;
+    color: #34364A;
+}
+
+.where-education {
+    font-size: 45px;
+    font-weight: bold;
+    color: #34364A;
+}
+
+.subtext {
+    font-size: 20;
+    color: #34364A;
+}
+
+.education {
+    color: #0079FF;
+}
+
+.divider {
+    margin-top: 20px;
+    width: 100%;
+    height: 2px;
+    background-color: #EAEAEA;
+}
