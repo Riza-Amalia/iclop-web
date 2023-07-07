@@ -13,7 +13,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <title>Modal Example</title>
+  <title>iCLOP</title>
 </head>
 
 
@@ -45,33 +45,61 @@
           </ul>
         </div>
         
-        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#myModal" style="border-radius: 20px; margin-right: 10px; width: 100px; height: 35px;">Sign In</button>
-        <button class="btn btn-primary custom-button-sign-up" onclick="window.location.href='register.html'">Sign
-          Up</button>
+        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#loginModal" style="border-radius: 20px; margin-right: 10px; width: 100px; height: 35px;">Sign In</button>
+        <button class="btn btn-primary custom-button-sign-up" onclick="window.location.href='register.html'">Sign Up</button>
       </div>
     </div>
   </nav>
 
   <!-- MODAL -->
-  <div class="modal" id="myModal">
-    <div class="modal-dialog">
+  <div class="modal" id="loginModal">
+    <div class="modal-dialog modal-xl">
       <div class="modal-content">
 
         <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">Modal Heading</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div class="modal-header border-0">
+          <button type="button" class="btn-close" aria-label="Close" data-dismiss="modal"></button>
         </div>
 
         <!-- Modal Body -->
-        <div class="modal-body">
-          <p>This is the modal body. You can add any content here.</p>
+        <div class="modal-body" style="margin-bottom:100px;">
+          <div class="row">
+            <div class="col-lg-6 content-left">
+              <img src="./images/sign-in.png" alt="Illustration" style="width: 450px; height: 450px; margin-right: 50px; margin-left: 50px;">
+            </div>
+            <!-- IMAGE -->
+            <div class="col-lg-6 content-right" style="padding-right: 180px;">
+              <!-- TITLE -->
+              <p class="sign-in-modal">Sign In</p>
+              <p class="welcome-modal">Welcome back! Please enter<br>your details.</p>
+
+              <!-- FORM -->
+              <div class="form-modal">
+                <label for="name" class="form-label" style="text-align: left; font-weight: 500">Name</label>
+                <input class="form-control" list="datalistOptions" id="name" placeholder="Name" style=" margin-bottom: 20px;">
+              </div>
+
+              <div class="form-modal">
+                <label for="name" class="form-label" style="text-align: left; font-weight: 500">Password</label>
+                <input type="password" class="form-control" list="datalistOptions" id="password" placeholder="Password" style=" margin-bottom: 20px;">
+              </div>
+
+              <!-- FORGOT PASSWORD -->
+              <p class="forgot-password-modal">Forgot Password ?</p>
+
+              <!-- BUTTON SIGN IN -->
+              <button class="btn btn-primary custom-button-sign-in-modal" onclick="window.location.href='dashboardStudent.html'">Sign In</button>
+
+              <p class="dont-have-account-modal">Don’t have an account? <span style="color: #1466C2;" onclick="window.location.href='register.html'">Sign Up</span></p>
+
+            </div>
+          </div>
         </div>
 
         <!-- Modal Footer -->
-        <div class="modal-footer">
+        <!-- <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
+        </div> -->
 
       </div>
     </div>
@@ -171,6 +199,8 @@
             </div>
           </div>
         </div>
+
+        <!-- CARD -->
 
         <!-- <div class="card" style="width: 325px; height: 385px; margin-right: 20px;">
           <img src="./images/cards/javascript.png" class="card-img-top" alt="...">
