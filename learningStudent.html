@@ -16,7 +16,7 @@
           background-color: #FFFFFF;
           width: 245px;
         }
-    
+
         .content {
           min-height: 400px;
           background-color: #FFFFFF;
@@ -44,7 +44,7 @@
             <div class="mx-auto">
               <ul class="navbar-nav mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#">Dashboard Student</a>
@@ -70,7 +70,7 @@
       <nav class="col-md-2 d-none d-md-block sidebar">
         <div class="sidebar-sticky">
           <ul class="nav flex-column">
-            <li class="nav-item">
+            <li class="nav-item" style="margin-bottom: 40px;">
                 <div class="row align-items-start">
                     <div class="col">
                       <p style="font-weight: 600; font-size: 14px; color: #34364A; margin-left: 15px;">APLAS WEBAPPS</p>
@@ -82,51 +82,51 @@
                 </div>
             </li>
             <li class="nav-item">
-                <div class="row align-items-start">
-                    <div class="col-1">
-                      <i class="fas fa-book" style="margin-top: 12px; margin-left: 15px;"></i>
-                    </div>
-                    <div class="col">
-                        <a class="nav-link active" href="#" onclick="showContent('start-learning')" style="color: #34364A;">Start Learning</a>
-                    </div>
+              <div class="row align-items-start">
+                <div class="col-2">
+                  <i class="fas fa-book" style="margin-top: 12px; margin-left: 15px; color: #676767;" id="learningIcon"></i>
                 </div>
+                <div class="col">
+                  <a class="nav-link active" href="#" onclick="showContent('start-learning')" style="color: #34364A;" id="learningLink">Start Learning</a>
+                </div>
+              </div>
             </li>
             <li class="nav-item">
-                <div class="row align-items-start">
-                    <div class="col-1">
-                      <i class="fas fa-check-circle" style="margin-top: 12px; margin-left: 15px;"></i>
-                    </div>
-                    <div class="col">
-                        <a class="nav-link" href="#" onclick="showContent('validation')" style="color: #34364A;">Validation Result</a>
-                    </div>
+              <div class="row align-items-start">
+                <div class="col-2">
+                  <i class="fas fa-check-circle" style="margin-top: 12px; margin-left: 15px; color: #676767;" id="validationIcon"></i>
                 </div>
+                <div class="col">
+                  <a class="nav-link" href="#" onclick="showContent('validation')" style="color: #34364A;" id="validationLink">Validation Result</a>
+                </div>
+              </div>
             </li>
             <li class="nav-item">
-                <div class="row align-items-start">
-                    <div class="col-1">
-                      <i class="fas fa-trophy" style="margin-top: 12px; margin-left: 15px;"></i>
-                    </div>
-                    <div class="col">
-                        <a class="nav-link" href="#" onclick="showContent('rank')" style="color: #34364A;">Top 20 Rank</a>
-                    </div>
+              <div class="row align-items-start">
+                <div class="col-2">
+                  <i class="fas fa-trophy" style="margin-top: 12px; margin-left: 15px; color: #676767;" id="rankIcon"></i>
                 </div>
+                <div class="col">
+                  <a class="nav-link" href="#" onclick="showContent('rank')" style="color: #34364A;" id="rankLink">Top 20 Rank</a>
+                </div>
+              </div>
             </li>
             <li class="nav-item">
-                <div class="row align-items-start">
-                    <div class="col-1">
-                      <i class="fas fa-cog" style="margin-top: 12px; margin-left: 15px;"></i>
-                    </div>
-                    <div class="col">
-                        <a class="nav-link" href="#" onclick="showContent('settings')" style="color: #34364A;">Settings</a>
-                    </div>
+              <div class="row align-items-start">
+                <div class="col-2">
+                  <i class="fas fa-cog" style="margin-top: 12px; margin-left: 15px; color: #676767;" id="settingsIcon"></i>
                 </div>
+                <div class="col">
+                  <a class="nav-link" href="#" onclick="showContent('settings')" style="color: #34364A;" id="settingsLink">Settings</a>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
       </nav>
 
       <!-- Content -->
-      <main class="col-md-10">
+      <main class="col-md-9">
         <div id="start-learning" class="content">
           <p style="font-size: 24px; font-weight: 500; color: #34364A;">Start Leraning</p>
           <div>
@@ -196,14 +196,55 @@
     </div>
   </div>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2023 iCLOP. All rights reserved.</p>
-    </div>
-  </footer>
-
   <script>
+    // Fungsi untuk mengubah warna ikon, teks, dan link menjadi biru
+    function changeColor(id) {
+      var icon = document.getElementById(id + 'Icon');
+      var link = document.getElementById(id + 'Link');
+      var text = document.getElementById(id + 'Text');
+
+      // Mengembalikan warna ikon, teks, dan link ke warna awal
+      var icons = document.getElementsByClassName('fas');
+      var links = document.getElementsByClassName('nav-link');
+      var texts = document.getElementsByClassName('nav-link-text');
+      for (var i = 0; i < icons.length; i++) {
+        icons[i].style.color = '#676767';
+      }
+      for (var j = 0; j < links.length; j++) {
+        links[j].style.color = '#34364A';
+      }
+      for (var k = 0; k < texts.length; k++) {
+        texts[k].style.color = '#34364A';
+      }
+
+      // Mengubah warna ikon, teks, dan link menjadi biru
+      icon.style.color = '#1A79E3';
+      link.style.color = '#1A79E3';
+      text.style.color = '#1A79E3';
+    }
+
+    // Menambahkan event listener pada setiap link
+    var startLearningLink = document.getElementById('learningLink');
+    startLearningLink.addEventListener('click', function() {
+      changeColor('learning');
+    });
+
+    var validationLink = document.getElementById('validationLink');
+    validationLink.addEventListener('click', function() {
+      changeColor('validation');
+    });
+
+    var rankLink = document.getElementById('rankLink');
+    rankLink.addEventListener('click', function() {
+      changeColor('rank');
+    });
+
+    var settingsLink = document.getElementById('settingsLink');
+    settingsLink.addEventListener('click', function() {
+      changeColor('settings');
+    });
+
+
     // Function to show the selected content based on sidebar link click
     function showContent(contentId) {
       // Hide all content divs
@@ -222,5 +263,13 @@
 
 </body>
 <script src="script.js"></script>
+<footer>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2023 iCLOP. All rights reserved.</p>
+      </div>
+    </footer>
+</footer>
 </html>
 
